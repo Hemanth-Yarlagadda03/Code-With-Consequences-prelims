@@ -1,5 +1,6 @@
 body {
   height: 100%;
+  transition: background-color 1s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -241,3 +242,13 @@ p {
 .log {
   background-color: #675555;
 }
+.section:nth-child(odd) {
+  background-color: #2980b9;
+}
+
+.section:nth-child(even) {
+  background-color: #e74c3c;
+}
+
+.text {
+  font-size: 2rem;}
