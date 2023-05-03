@@ -19,3 +19,7 @@ root.addEventListener('mousemove', e => {
 function setPosition(element, e) {
   element.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
 }
+
+function poke(){
+  window.open("./pokemon.html","_self");
+}

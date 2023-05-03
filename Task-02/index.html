@@ -14,19 +14,19 @@
     <div class="second-logo">
         <img src="imgs/vidyut.png" alt="" class="vidyut">
     </div>
-    </nav> 
+    </nav>
   </header>
-  <section class="first"> 
+  <section class="first">
     <h2>Welcome to the</h2>
     <div class="typewriter">
       <h1>"Code With Consequences"</h1>
     </div>
     <span>Scroll down for task description ↓</span>
-  </section> 
+  </section>
   <section class="second">
     <h2>Task description</h2>
     <p>
-        Here one slider changes the size of the word "Aum", similiarly. 
+        Here one slider changes the size of the word "Aum", similiarly.
         Add three more slider controls, each with a ranging from 0 to 255 (eg. 1st slider takes R value, 2nd takes G & 3rd takes B value.), to pick an RGB colour code and apply this colour code to the colour of the font used to display the text 'AUM NAMAH SHIVAYA'.
         <br><br>
         Remember, Evaulation will be done only on the basis of creativity, but not on the basis of completing the given tasks. So, try to be creative as much as you can.
@@ -34,19 +34,22 @@
     <div class="main">
       <div id="color-sliders">
         <div>
-          <label for="blue-slider">Size:</label>
-          <input type="range" id="slider" min="1" max="9" value=2 onchange="update(this.value);">
+          <label for="slider">Size:</label>
+          <input type="range" id="slider" min="1" max="9" value=2>
         </div>
         <div>
           <label for="red-slider">Red:</label>
+          <input type="range" id="red-slider" min="0" max="255" value="128" >
 <!--          Todo: Add a slider here (Note: id="red-slider")-->
         </div>
         <div>
           <label for="green-slider">Green:</label>
+          <input type="range" id="green-slider" min="0" max="255" value="128" >
 <!--          Todo: Add a slider here (Note: id="green-slider")-->
         </div>
         <div>
           <label for="blue-slider">Blue:</label>
+          <input type="range" id="blue-slider" min="0" max="255" value="128" >
 <!--          Todo: Add a slider here (Note: id="blue-slider")-->
         </div>
       </div>
@@ -57,7 +60,7 @@
         <div id="balance">SHIVAYA!</div>
       </div>
   </div>
-           
+
   </section>
   <script  src="script.js"></script>
 </body>
