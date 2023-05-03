@@ -1,7 +1,7 @@
 const root = document.querySelector("html");
 
-let isRadian = false;
-let isLog10 = false;
+let isRadian = true;
+let isLog10 = true;
 
 const cursor = document.createElement("div");
 cursor.classList.add("cursor");
@@ -41,13 +41,21 @@ function sqrt(form) {
   form.display.value = Math.sqrt(form.display.value);
 }
 
+ // set the initial value of isLog10 to true
+
 function ln(form) {
+  const displayValue = document.querySelector('#display').value;
+  let result = 0;
   if (isLog10) {
-    // Todo: Update the display value with log10 of the input
-  } else {
-    // Todo: Update the display value with log of the input
+    result = Math.log10(parseFloat(displayValue));
+  } else {                                           
+    result = Math.log(parseFloat(displayValue));
   }
+  document.querySelector('#display').value = result;
 }
+// Done: Update the display value with log10 of the input
+
+  // Done: Update the display value with log of the input
 
 function exp(form) {
   form.display.value = Math.exp(form.display.value);
@@ -88,7 +96,10 @@ function checkNum(str) {
         ch != "." &&
         ch != "(" &&
         ch != ")" &&
-        ch != "%"
+        ch != "%" &&
+        ch != "s" && ch != "i" && ch != "n" &&
+        ch != "c" && ch != "o" && ch != "s" &&
+        ch != "t" && ch != "a" && ch != "n"
       ) {
         alert("invalid entry!");
         return false;
@@ -96,19 +107,43 @@ function checkNum(str) {
     }
   }
   return true;
-}
+}//bug fixed
 
 function switchTheme() {
-    // Todo : toggle the dark class on the calculator element
-    // Todo : toggle the dark class on the calculator element
-    // Todo : You may further move with your own css to change the theme of the calculator
+    var calculatorContainer = document.querySelector('.calculator');
+    calculatorContainer.classList.toggle('dark');
+    // Done : toggle the dark class on the calculator element
+    // Done : You may further move with your own css to change the theme of the calculator
 }
+
 
 function toggleRad() {
-  Todo //: use isRadian to determine which conversion to use and hence update the #display value
-}
+  isRadian = !isRadian;
+  const message = isRadian ? "Converting to radian mode" : "Converting to degree mode";
+  alert(message);
+  const radDegBtn = document.querySelector('.themeSwitchButton');
 
-function toggleLog() {
-  // Todo: use isLog10 to determine which log function to use and hence update the button text
+  const displayValue = document.querySelector('#display').value;
+  let convertedValue = "";
 
+  if (isRadian) {
+    convertedValue = parseFloat(displayValue) * Math.PI / 180;
+  } else {
+    convertedValue = parseFloat(displayValue) * 180 / Math.PI;
+  }
+
+  document.querySelector('#display').value = convertedValue;
 }
+// DONE: perform the necessary conversion and update the #display value
+
+
+  // Done: use isLog10 to determine which log function to use and hence update the button text
+
+  function toggleLog() {
+    isLog10 = !isLog10;
+    const logBtn = document.querySelector('.themeSwitchButton');
+    const message = isLog10 ? "Toggle Log Base 10" : "Toggle Natural Log";
+    logBtn.value = message;
+    alert(message);
+  }
+

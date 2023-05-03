@@ -48,13 +48,14 @@
   <section class="wrapper">
     <div class="wrap">
       <div>
+        <input type="button" value="Toggle Log Base 10/Natural Log" class="themeSwitchButton" onclick="toggleLog()">
+      </div>
+      <div>
         <input type="button" value="Switch Theme" class="themeSwitchButton" onclick="switchTheme()">
       </div>
       <div>
-        <input type="button" value="Toggle Log Base 10" class="themeSwitchButton" onclick="toggleLog()">
-      </div>
-      <div>
         <input type="button" value="Toggle Radian/Degree" class="themeSwitchButton" onclick="toggleRad()">
+        
       </div>
     </div>
     <form name="sci-calc">
@@ -134,7 +135,7 @@
               onclick="if(checkNum(this.form.display.value)) { tan(this.form) }">
           </td>
         </tr>
-        </tabel>
+        </table>
     </form>
   </section>
   <script src="script.js"></script>

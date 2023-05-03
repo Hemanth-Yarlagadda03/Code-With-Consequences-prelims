@@ -154,14 +154,14 @@ p {
   height: 40px;
   text-align: right;
   background-color: black;
-  border: 3px solid white;
+  border: 3px solid magenta;
   font-size: 18px;
   left: 2px;
   top: 2px;
-  color: #7fff00;
+  color: cyan;
 }
 .btnTop {
-  color: white;
+  color: #0FFF50;
   background-color: #6f6f6f;
   font-size: 14px;
   margin: auto;
@@ -169,7 +169,7 @@ p {
   height: 25px;
 }
 .btnNum {
-  color: white;
+  color: #0FFF50;
   background-color: black;
   font-size: 14px;
   margin: auto;
@@ -197,8 +197,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin-right: 1.5rem;
+  float: left;                    /*Done: postion the wrapper for the buttons to position them on the left side of the calculator*/
+  margin-right: 1rem;
 }
+
 
 .themeSwitchButton {
   border-radius: 5px;
@@ -209,10 +211,13 @@ p {
   padding: 2px 7px;
   margin-bottom: 1rem;
 }
+.themeSwitchButton:hover {
+  background-color: #c5c5c5;    /*Done: write css for .themeSwitchButton:hover*/
+  color: #474646;
+  box-shadow: 0 0 5px #c5c5c5;
+}
 
-/*Todo: write css for .themeSwitchButton:hover*/
 
-/*Todo: postion the wrapper for the buttons to position them on the left side of the calculator*/
 
 
 .dark {
